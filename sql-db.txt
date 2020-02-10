@@ -1,8 +1,4 @@
 --
--- A DB for CA2
---
-
---
 -- Table structure for table `categories`
 --
 
