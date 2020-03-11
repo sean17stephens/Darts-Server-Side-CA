@@ -106,20 +106,20 @@ br {
 }
 
 /********************************************************************
-* Additional styles for the record Manager application
+* Additional styles for the player Manager application
 ********************************************************************/
-#add_record_form {
+#add_player_form {
     margin: .5em 0 1em;
 }
-#add_record_form label {
+#add_player_form label {
     width: 6em;
     padding-right: 1em;
     padding-bottom: .5em;
     float: left;
 }
-#add_record_form input {
+#add_player_form input {
     float: left;
 }
-#add_record_form input[text] {
+#add_player_form input[text] {
     width: 15em;
 }
