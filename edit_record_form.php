@@ -35,9 +35,9 @@ $statement->closeCursor();
             <input type="input" name="code"
                    value="<?php echo $record['code']; ?>">
             <br>
-            <label>Name:</label>
-            <input type="input" name="name"
-                   value="<?php echo $record['name']; ?>">
+            <label>Dart:</label>
+            <input type="input" name="dart"
+                   value="<?php echo $record['dart']; ?>">
             <br>
             <label>Price:</label>
             <input type="input" name="price"
