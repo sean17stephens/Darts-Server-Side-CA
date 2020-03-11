@@ -1,11 +1,11 @@
 <?php
 require('database.php');
-$record_id = filter_input(INPUT_POST, 'record_id', FILTER_VALIDATE_INT);
+$player_id = filter_input(INPUT_POST, 'player_id', FILTER_VALIDATE_INT);
 $query = 'SELECT *
-          FROM records
-          WHERE recordID = :record_id';
+          FROM players
+          WHERE playerID = :player_id';
 $statement = $db->prepare($query);
-$statement->bindValue(':record_id', $record_id);
+$statement->bindValue(':player_id', $player_id);
 $statement->execute();
 $record = $statement->fetch(PDO::FETCH_ASSOC);
 $statement->closeCursor();
@@ -22,32 +22,32 @@ $statement->closeCursor();
     <header><h1>PHP CRUD</h1></header>
     <main>
         <h1>Edit record</h1>
-        <form action="edit_record.php" method="post" enctype="multipart/form-data"
-              id="add_record_form">
-            <input type="hidden" name="original_image" value="<?php echo $record['image']; ?>" />
-            <input type="hidden" name="record_id"
-                   value="<?php echo $record['recordID']; ?>">
+        <form action="edit_player.php" method="post" enctype="multipart/form-data"
+              id="add_player_form">
+            <input type="hidden" name="original_image" value="<?php echo $player['image']; ?>" />
+            <input type="hidden" name="player_id"
+                   value="<?php echo $player['playerID']; ?>">
             <label>Category ID:</label>
             <input type="category_id" name="category_id"
-                   value="<?php echo $record['categoryID']; ?>">
+                   value="<?php echo $player['categoryID']; ?>">
             <br>
             <label>Code:</label>
             <input type="input" name="code"
-                   value="<?php echo $record['code']; ?>">
+                   value="<?php echo $player['code']; ?>">
             <br>
             <label>Dart:</label>
             <input type="input" name="dart"
-                   value="<?php echo $record['dart']; ?>">
+                   value="<?php echo $player['dart']; ?>">
             <br>
             <label>Price:</label>
             <input type="input" name="price"
-                   value="<?php echo $record['price']; ?>">
+                   value="<?php echo $player['price']; ?>">
             <br>
             <label>Image:</label>
             <input type="file" name="image" accept="image/*" />
             <br>
             <?php if ($record['image'] != "") { ?>
-            <p><img src="image_uploads/<?php echo $record['image']; ?>" height="150" /></p>
+            <p><img src="image_uploads/<?php echo $player['image']; ?>" height="150" /></p>
             <?php } ?>
             <label>&nbsp;</label>
             <input type="submit" value="Save Changes">
