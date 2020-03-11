@@ -26,7 +26,7 @@ CREATE TABLE `records` (
   `recordID` int(11) NOT NULL,
   `categoryID` int(11) NOT NULL,
   `code` varchar(10) NOT NULL,
-  `name` varchar(255) NOT NULL,
+  `dart` varchar(255) NOT NULL,
   `price` decimal(10,2) NOT NULL,
   `image` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -35,12 +35,12 @@ CREATE TABLE `records` (
 -- Dumping data for table `records`
 --
 
-INSERT INTO `records` (`recordID`, `categoryID`, `code`, `name`, `price`, `image`) VALUES
-(13, 1, '12341234', 'Here is a name', '456.00', '973718.jpg'),
-(16, 2, '344635', 'Dolor sit amet, consectetuer.', '788.00', '706170.jpg'),
-(17, 3, '876456', 'Ipsum dolor sit amet consectetuer.', '899.00', '443971.jpg'),
-(18, 1, '873653673', 'Here is a name', '34.00', '750113.jpg'),
-(19, 1, '45638754', 'Here is a name', '123.00', '280424.jpg');
+INSERT INTO `records` (`recordID`, `categoryID`, `code`, `dart`, `price`, `image`) VALUES
+(13, 1, '12341234', 'Phil Taylor', '456.00', '973718.jpg'),
+(16, 2, '344635', 'Simon Whitlock', '788.00', '706170.jpg'),
+(17, 3, '876456', 'Adrian Lewis', '899.00', '443971.jpg'),
+(18, 1, '873653673', 'Rob Cross', '34.00', '750113.jpg'),
+(19, 1, '45638754', 'Peter Wright', '123.00', '280424.jpg');
 
 --
 -- Indexes for dumped tables
