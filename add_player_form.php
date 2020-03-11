@@ -20,9 +20,9 @@ $statement->closeCursor();
     <header><h1>PHP CRUD</h1></header>
 
     <main>
-        <h1>Add Record</h1>
-        <form action="add_record.php" method="post" enctype="multipart/form-data"
-              id="add_record_form">
+        <h1>Add Player</h1>
+        <form action="add_player.php" method="post" enctype="multipart/form-data"
+              id="add_player_form">
             <label>Category:</label>
             <select name="category_id">
             <?php foreach ($categories as $category) : ?>
