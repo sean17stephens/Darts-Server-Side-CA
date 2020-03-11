@@ -53,7 +53,7 @@ if ($category_id == null || $category_id == false ||
     
     require_once('database.php');
     // Add the records to the database 
-    $query = "INSERT INTO records
+    $query = "INSERT INTO players
                  (categoryID, code, dart, price, image)
               VALUES
                  (:category_id, :code, :dart, :price, :image)";
