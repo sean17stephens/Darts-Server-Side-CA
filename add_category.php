@@ -1,17 +1,17 @@
 <?php
 // Get the category data
-$name = $name = filter_input(INPUT_POST, 'name');
+$dart = $dart = filter_input(INPUT_POST, 'dart');
 // Validate inputs
-if ($name == null) {
+if ($dart == null) {
     $error = "Invalid category data. Check all fields and try again.";
     include('error.php');
 } else {
     require_once('database.php');
     // Add the record to the database
     $query = "INSERT INTO categories (categoryName)
-              VALUES (:name)";
+              VALUES (:dart)";
     $statement = $db->prepare($query);
-    $statement->bindValue(':name', $name);
+    $statement->bindValue(':dart', $dart);
     $statement->execute();
     $statement->closeCursor();
     // Display the Category List page
