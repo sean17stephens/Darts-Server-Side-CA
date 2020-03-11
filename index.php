@@ -26,13 +26,13 @@ $statement2->execute();
 $categories = $statement2->fetchAll();
 $statement2->closeCursor();
 // Get records for selected category
-$queryRecords = "SELECT * FROM records
+$queryPlayers = "SELECT * FROM players
 WHERE categoryID = :category_id
-ORDER BY recordID";
-$statement3 = $db->prepare($queryRecords);
+ORDER BY playerID";
+$statement3 = $db->prepare($queryPlayers);
 $statement3->bindValue(':category_id', $category_id);
 $statement3->execute();
-$records = $statement3->fetchAll();
+$players = $statement3->fetchAll();
 $statement3->closeCursor();
 ?>
 <!DOCTYPE html>
@@ -46,7 +46,7 @@ $statement3->closeCursor();
 <body>
 <header><h1>PHP CRUD</h1></header>
 <main>
-<h1>Record List</h1>
+<h1>Player List</h1>
 <aside>
 <!-- display a list of categories in the sidebar-->
 <h2>Categories</h2>
@@ -73,32 +73,32 @@ $statement3->closeCursor();
 <th>Delete</th>
 <th>Edit</th>
 </tr>
-<?php foreach ($records as $record) : ?>
+<?php foreach ($players as $player) : ?>
 <tr>
-<td><img src="image_uploads/<?php echo $record['image']; ?>" width="100px" height="100px" /></td>
-<td><?php echo $record['dart']; ?></td>
-<td><?php echo $record['code']; ?></td>
-<td><?php echo $record['price']; ?></td>
-<td><form action="delete_record.php" method="post"
-id="delete_record_form">
-<input type="hidden" name="record_id"
-value="<?php echo $record['recordID']; ?>">
+<td><img src="image_uploads/<?php echo $player['image']; ?>" width="100px" height="100px" /></td>
+<td><?php echo $player['dart']; ?></td>
+<td><?php echo $player['code']; ?></td>
+<td><?php echo $player['price']; ?></td>
+<td><form action="delete_player.php" method="post"
+id="delete_player_form">
+<input type="hidden" name="player_id"
+value="<?php echo $player['playerID']; ?>">
 <input type="hidden" name="category_id"
-value="<?php echo $record['categoryID']; ?>">
+value="<?php echo $player['categoryID']; ?>">
 <input type="submit" value="Delete">
 </form></td>
-<td><form action="edit_record_form.php" method="post"
-id="delete_record_form">
-<input type="hidden" name="record_id"
-value="<?php echo $record['recordID']; ?>">
+<td><form action="edit_player_form.php" method="post"
+id="delete_player_form">
+<input type="hidden" name="player_id"
+value="<?php echo $player['playerID']; ?>">
 <input type="hidden" name="category_id"
-value="<?php echo $record['categoryID']; ?>">
+value="<?php echo $player['categoryID']; ?>">
 <input type="submit" value="Edit">
 </form></td>
 </tr>
 <?php endforeach; ?>
 </table>
-<p><a href="add_record_form.php">Add Record</a></p>
+<p><a href="add_player_form.php">Add Player</a></p>
 <p><a href="category_list.php">Edit Categories</a></p>
 </section>
 </main>
