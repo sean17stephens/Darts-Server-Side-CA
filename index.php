@@ -67,7 +67,7 @@ $statement3->closeCursor();
 <table>
 <tr>
 <th>Image</th>
-<th>Name</th>
+<th>Dart</th>
 <th>Code</th>
 <th>Price</th>
 <th>Delete</th>
@@ -76,7 +76,7 @@ $statement3->closeCursor();
 <?php foreach ($records as $record) : ?>
 <tr>
 <td><img src="image_uploads/<?php echo $record['image']; ?>" width="100px" height="100px" /></td>
-<td><?php echo $record['name']; ?></td>
+<td><?php echo $record['dart']; ?></td>
 <td><?php echo $record['code']; ?></td>
 <td><?php echo $record['price']; ?></td>
 <td><form action="delete_record.php" method="post"
