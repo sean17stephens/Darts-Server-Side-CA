@@ -31,7 +31,7 @@
             <td><?php echo $category['categoryName']; ?></td>
             <td>
                 <form action="delete_category.php" method="post"
-                      id="delete_record_form">
+                      id="delete_player_form">
                     <input type="hidden" name="category_id"
                            value="<?php echo $category['categoryID']; ?>">
                     <input type="submit" value="Delete">
