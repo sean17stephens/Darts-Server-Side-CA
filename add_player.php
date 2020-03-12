@@ -1,9 +1,9 @@
 <?php
 // Get the data
 $category_id = filter_input(INPUT_POST, 'category_id', FILTER_VALIDATE_INT);
-$code = filter_input(INPUT_POST, 'bestfinish');
+$bestfinish = filter_input(INPUT_POST, 'bestfinish');
 $dart = filter_input(INPUT_POST, 'dart');
-$price = filter_input(INPUT_POST, 'winning', FILTER_VALIDATE_FLOAT);
+$winning = filter_input(INPUT_POST, 'winning', FILTER_VALIDATE_FLOAT);
 // Validate inputs
 if ($category_id == null || $category_id == false ||
         $bestfinish == null || $dart == null || $winning == null || $winning == false) {
