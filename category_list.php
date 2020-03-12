@@ -12,14 +12,14 @@
 <html>
 <!-- the head section -->
 <head>
-    <title>PHP CRUD</title>
+    <title>Edit Leagues</title>
     <link rel="stylesheet" type="text/css" href="main.css">
 </head>
 <!-- the body section -->
 <body>
-    <header><h1>PHP CRUD</h1></header>
+    <header><h1>Edit Leagues</h1></header>
     <main>
-    <h1>Categories</h1>
+    <h1>Leagues</h1>
     <table>
         <tr>
             <th>Name</th>
@@ -41,7 +41,7 @@
         <?php endforeach; ?>
     </table>
     <br>
-    <h2>Add Category</h2>
+    <h2>Add League</h2>
     <form action="add_category.php" method="post"
           id="add_category_form">
         <label>Name:</label>

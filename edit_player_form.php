@@ -7,21 +7,21 @@ $query = 'SELECT *
 $statement = $db->prepare($query);
 $statement->bindValue(':player_id', $player_id);
 $statement->execute();
-$record = $statement->fetch(PDO::FETCH_ASSOC);
+$player = $statement->fetch(PDO::FETCH_ASSOC);
 $statement->closeCursor();
 ?>
 <!DOCTYPE html>
 <html>
 <!-- the head section -->
 <head>
-    <title>PHP CRUD</title>
+    <title>Edit an Existing PLayer</title>
     <link rel="stylesheet" type="text/css" href="main.css">
 </head>
 <!-- the body section -->
 <body>
-    <header><h1>PHP CRUD</h1></header>
+    <header><h1>Edit Player</h1></header>
     <main>
-        <h1>Edit record</h1>
+        <h1>Edit Player</h1>
         <form action="edit_player.php" method="post" enctype="multipart/form-data"
               id="add_player_form">
             <input type="hidden" name="original_image" value="<?php echo $player['image']; ?>" />
@@ -31,22 +31,22 @@ $statement->closeCursor();
             <input type="category_id" name="category_id"
                    value="<?php echo $player['categoryID']; ?>">
             <br>
-            <label>BestFinish:</label>
+            <label>Best Finish:</label>
             <input type="input" name="bestfinish"
                    value="<?php echo $player['bestfinish']; ?>">
             <br>
-            <label>Dart:</label>
+            <label>Name:</label>
             <input type="input" name="dart"
                    value="<?php echo $player['dart']; ?>">
             <br>
-            <label>Winning:</label>
+            <label>Winnings:</label>
             <input type="input" name="winning"
                    value="<?php echo $player['winning']; ?>">
             <br>
             <label>Image:</label>
             <input type="file" name="image" accept="image/*" />
             <br>
-            <?php if ($record['image'] != "") { ?>
+            <?php if ($player['image'] != "") { ?>
             <p><img src="image_uploads/<?php echo $player['image']; ?>" height="150" /></p>
             <?php } ?>
             <label>&nbsp;</label>
@@ -55,7 +55,7 @@ $statement->closeCursor();
         </form>
     </main>
     <footer>
-        <p>&copy; <?php echo date("Y"); ?> PHP CRUD, Inc.</p>
+        <p>&copy; <?php echo date("Y"); ?> Sean's Darts Site, Inc.</p>
     </footer>
 </body>
 </html>

@@ -1,7 +1,7 @@
 <?php
-    $dsn = 'mysql:host=localhost;dbname=php-crud';
+    $dsn = 'mysql:host=localhost;dbname=database';
     $username = 'root';
-    $password = 'root';
+    $password = '';
     try {
         $db = new PDO($dsn, $username, $password);
     } catch (PDOException $e) {

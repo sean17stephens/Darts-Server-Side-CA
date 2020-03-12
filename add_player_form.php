@@ -12,15 +12,15 @@ $statement->closeCursor();
 <html>
 <!-- the head section -->
 <head>
-    <title>PHP CRUD</title>
+    <title>Add a New Player</title>
     <link rel="stylesheet" type="text/css" href="main.css">
 </head>
 <!-- the body section -->
 <body>
-    <header><h1>PHP CRUD</h1></header>
+    <header><h1>Add a New Player</h1></header>
 
     <main>
-        <h1>Add Player</h1>
+        <h1>Add New Player</h1>
         <form action="add_player.php" method="post" enctype="multipart/form-data"
               id="add_player_form">
             <label>Category:</label>
@@ -33,15 +33,15 @@ $statement->closeCursor();
             </select>
             <br>
 
-            <label>BestFinish:</label>
+            <label>Best Finish:</label>
             <input type="input" name="bestfinish">
             <br>
 
-            <label>Dart:</label>
+            <label>Name:</label>
             <input type="input" name="dart">
             <br>
 
-            <label>Winning:</label>
+            <label>Winnings:</label>
             <input type="input" name="winning">
             <br>
 
@@ -49,13 +49,13 @@ $statement->closeCursor();
             <input type="file" name="image" accept="image/*" />
             <br>
             <label>&nbsp;</label>
-            <input type="submit" value="Add Record">
+            <input type="submit" value="Add Player">
             <br>
         </form>
         <p><a href="index.php">Homepage</a></p>
     </main>
     <footer>
-        <p>&copy; <?php echo date("Y"); ?> PHP CRUD, Inc.</p>
+        <p>&copy; <?php echo date("Y"); ?> Sean's Darts Site, Inc.</p>
     </footer>
 </body>
 </html>

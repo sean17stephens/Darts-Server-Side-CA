@@ -1,6 +1,6 @@
 /* the styles for the html elements */
 html {
-    background-color: #ccc;
+    background-color: rgb(16, 66, 37);
 }
 body {
     margin-top: 0;
@@ -8,17 +8,17 @@ body {
     width: 1000px;
     margin: 0 auto;
     background-color: white;
-    border: 1px solid black;
+    border: 1px solid limegreen;
     padding: .5em 2em;
 }
 header {
     margin: 0;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid green;
 }
 header h1 {
     margin: 0;
     padding: .5em 0;
-    color: black;
+    color: green;
 }
 main {
     margin: 0;
@@ -43,7 +43,7 @@ section {
 footer {
     clear: both;
     margin-top: 1em;
-    border-top: 2px solid black;
+    border-top: 2px solid green;
 }
 footer p {
     text-align: right;
@@ -72,7 +72,7 @@ li {
     padding: 0;
 }
 a {
-    color: rgb(41, 64, 124);
+    color: limegreen;
     font-weight: bold;
 }
 a:hover {
@@ -83,7 +83,7 @@ table {
     border-collapse: collapse;
 }
 td, th {
-    border: 1px dashed black;
+    border: 1px dashed rgb(206, 21, 21);
     padding: .2em .5em .2em .5em;
     vertical-align: top;
     text-align: left;

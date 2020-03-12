@@ -39,17 +39,17 @@ $statement3->closeCursor();
 <html>
 <!-- the head section -->
 <head>
-<title>PHP CRUD</title>
+<title> Darts Players</title>
 <link rel="stylesheet" type="text/css" href="main.css">
 </head>
 <!-- the body section -->
 <body>
-<header><h1>PHP CRUD</h1></header>
+<header><h1>Darts Players</h1></header>
 <main>
 <h1>Player List</h1>
 <aside>
 <!-- display a list of categories in the sidebar-->
-<h2>Categories</h2>
+<h2>Leagues</h2>
 <nav>
 <ul>
 <?php foreach ($categories as $category) : ?>
@@ -67,9 +67,9 @@ $statement3->closeCursor();
 <table>
 <tr>
 <th>Image</th>
-<th>Dart</th>
-<th>BestFinish</th>
-<th>Winning</th>
+<th>Name</th>
+<th>Best Finish</th>
+<th>Winnings</th>
 <th>Delete</th>
 <th>Edit</th>
 </tr>
@@ -99,11 +99,11 @@ value="<?php echo $player['categoryID']; ?>">
 <?php endforeach; ?>
 </table>
 <p><a href="add_player_form.php">Add Player</a></p>
-<p><a href="category_list.php">Edit Categories</a></p>
+<p><a href="category_list.php">Edit Leagues</a></p>
 </section>
 </main>
 <footer>
-<p>&copy; <?php echo date("Y"); ?> PHP CRUD, Inc.</p>
+<p>&copy; <?php echo date("Y"); ?> Sean's Darts Site, Inc.</p>
 </footer>
 </body>
 </html>
