@@ -39,9 +39,9 @@ $statement->closeCursor();
             <input type="input" name="dart"
                    value="<?php echo $player['dart']; ?>">
             <br>
-            <label>Price:</label>
-            <input type="input" name="price"
-                   value="<?php echo $player['price']; ?>">
+            <label>Winning:</label>
+            <input type="input" name="winning"
+                   value="<?php echo $player['winning']; ?>">
             <br>
             <label>Image:</label>
             <input type="file" name="image" accept="image/*" />
