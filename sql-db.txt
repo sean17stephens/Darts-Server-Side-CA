@@ -27,7 +27,7 @@ CREATE TABLE `players` (
   `categoryID` int(11) NOT NULL,
   `bestfinish` varchar(10) NOT NULL,
   `dart` varchar(255) NOT NULL,
-  `price` decimal(10,2) NOT NULL,
+  `winning` decimal(10,2) NOT NULL,
   `image` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -35,12 +35,12 @@ CREATE TABLE `players` (
 -- Dumping data for table `players`
 --
 
-INSERT INTO `players` (`playerID`, `categoryID`, `bestfinish`, `dart`, `price`, `image`) VALUES
-(1, 1, '170', 'Phil Taylor', '456.00', '973718.jpg'),
-(2, 2, '100', 'Simon Whitlock', '788.00', '706170.jpg'),
-(3, 3, '120', 'Adrian Lewis', '899.00', '443971.jpg'),
-(4, 1, '140', 'Rob Cross', '34.00', '750113.jpg'),
-(5, 1, '156', 'Peter Wright', '123.00', '280424.jpg');
+INSERT INTO `players` (`playerID`, `categoryID`, `bestfinish`, `dart`, `winning`, `image`) VALUES
+(1, 1, '170', 'Phil Taylor', '456000.00', '973718.jpg'),
+(2, 2, '100', 'Simon Whitlock', '78800.00', '706170.jpg'),
+(3, 3, '120', 'Adrian Lewis', '899000.00', '443971.jpg'),
+(4, 1, '140', 'Rob Cross', '34000.00', '750113.jpg'),
+(5, 1, '156', 'Peter Wright', '1230000.00', '280424.jpg');
 
 --
 -- Indexes for dumped tables
