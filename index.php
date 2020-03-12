@@ -68,7 +68,7 @@ $statement3->closeCursor();
 <tr>
 <th>Image</th>
 <th>Dart</th>
-<th>Code</th>
+<th>BestFinish</th>
 <th>Price</th>
 <th>Delete</th>
 <th>Edit</th>
@@ -77,7 +77,7 @@ $statement3->closeCursor();
 <tr>
 <td><img src="image_uploads/<?php echo $player['image']; ?>" width="100px" height="100px" /></td>
 <td><?php echo $player['dart']; ?></td>
-<td><?php echo $player['code']; ?></td>
+<td><?php echo $player['bestfinish']; ?></td>
 <td><?php echo $player['price']; ?></td>
 <td><form action="delete_player.php" method="post"
 id="delete_player_form">
