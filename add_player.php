@@ -3,10 +3,10 @@
 $category_id = filter_input(INPUT_POST, 'category_id', FILTER_VALIDATE_INT);
 $code = filter_input(INPUT_POST, 'bestfinish');
 $dart = filter_input(INPUT_POST, 'dart');
-$price = filter_input(INPUT_POST, 'price', FILTER_VALIDATE_FLOAT);
+$price = filter_input(INPUT_POST, 'winning', FILTER_VALIDATE_FLOAT);
 // Validate inputs
 if ($category_id == null || $category_id == false ||
-        $bestfinish == null || $dart == null || $price == null || $price == false) {
+        $bestfinish == null || $dart == null || $winning == null || $winning == false) {
     $error = "Invalid data. Check all fields and try again.";
     include('error.php');
     exit();
@@ -54,14 +54,14 @@ if ($category_id == null || $category_id == false ||
     require_once('database.php');
     // Add the records to the database 
     $query = "INSERT INTO players
-                 (categoryID, bestfinish, dart, price, image)
+                 (categoryID, bestfinish, dart, winning, image)
               VALUES
-                 (:category_id, :bestfinish, :dart, :price, :image)";
+                 (:category_id, :bestfinish, :dart, :winning, :image)";
     $statement = $db->prepare($query);
     $statement->bindValue(':category_id', $category_id);
     $statement->bindValue(':bestfinish', $bestfinish);
     $statement->bindValue(':dart', $dart);
-    $statement->bindValue(':price', $price);
+    $statement->bindValue(':winning', $winning);
     $statement->bindValue(':image', $image);
     $statement->execute();
     $statement->closeCursor();
