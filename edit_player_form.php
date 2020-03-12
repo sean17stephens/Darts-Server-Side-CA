@@ -31,9 +31,9 @@ $statement->closeCursor();
             <input type="category_id" name="category_id"
                    value="<?php echo $player['categoryID']; ?>">
             <br>
-            <label>Code:</label>
-            <input type="input" name="code"
-                   value="<?php echo $player['code']; ?>">
+            <label>BestFinish:</label>
+            <input type="input" name="bestfinish"
+                   value="<?php echo $player['bestfinish']; ?>">
             <br>
             <label>Dart:</label>
             <input type="input" name="dart"
