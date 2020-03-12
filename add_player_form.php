@@ -41,8 +41,8 @@ $statement->closeCursor();
             <input type="input" name="dart">
             <br>
 
-            <label>Price:</label>
-            <input type="input" name="price">
+            <label>Winning:</label>
+            <input type="input" name="winning">
             <br>
 
             <label>Image:</label>
