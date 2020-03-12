@@ -2,12 +2,12 @@
 // Get the data
 $player_id = filter_input(INPUT_POST, 'player_id', FILTER_VALIDATE_INT);
 $category_id = filter_input(INPUT_POST, 'category_id', FILTER_VALIDATE_INT);
-$code = filter_input(INPUT_POST, 'code');
+$bestfinish = filter_input(INPUT_POST, 'bestfinish');
 $dart = filter_input(INPUT_POST, 'dart');
 $price = filter_input(INPUT_POST, 'price', FILTER_VALIDATE_FLOAT);
 // Validate inputs
 if ($player_id == NULL || $player_id == FALSE || $category_id == NULL ||
-$category_id == FALSE || empty($code) || empty($dart) ||
+$category_id == FALSE || empty($bestfinish) || empty($dart) ||
 $price == NULL || $price == FALSE) {
 $error = "Invalid data. Check all fields and try again.";
 include('error.php');
@@ -44,14 +44,14 @@ $image = $original_image; // old image from database
 require_once('database.php');
 $query = 'UPDATE players
 SET categoryID = :category_id,
-code = :code,
+bestfinish = :bestfinish,
 dart = :dart,
 price = :price,
 image = :image
 WHERE playerID = :player_id';
 $statement = $db->prepare($query);
 $statement->bindValue(':category_id', $category_id);
-$statement->bindValue(':code', $code);
+$statement->bindValue(':bestfinish', $bestfinish);
 $statement->bindValue(':dart', $dart);
 $statement->bindValue(':price', $price);
 $statement->bindValue(':image', $image);
