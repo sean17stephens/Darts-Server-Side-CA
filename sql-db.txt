@@ -36,11 +36,11 @@ CREATE TABLE `players` (
 --
 
 INSERT INTO `players` (`playerID`, `categoryID`, `bestfinish`, `dart`, `winning`, `image`) VALUES
-(1, 1, '170', 'Phil Taylor', '456000.00', '973718.jpg'),
-(2, 2, '100', 'Simon Whitlock', '78800.00', '706170.jpg'),
-(3, 3, '120', 'Adrian Lewis', '899000.00', '443971.jpg'),
-(4, 1, '140', 'Rob Cross', '34000.00', '750113.jpg'),
-(5, 1, '156', 'Peter Wright', '1230000.00', '280424.jpg');
+(1, 1, '170', 'Phil Taylor', '456000.00', 'philtaylor.png'),
+(2, 2, '100', 'Simon Whitlock', '78800.00', 'simonwhitlock.jpg'),
+(3, 3, '120', 'Adrian Lewis', '899000.00', 'adrianlewis.jpg'),
+(4, 1, '140', 'Rob Cross', '34000.00', 'robcross.jpg'),
+(5, 1, '156', 'Peter Wright', '1230000.00', 'peterwright.jpg');
 
 --
 -- Indexes for dumped tables
