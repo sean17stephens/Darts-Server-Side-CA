@@ -1,7 +1,6 @@
-/* the styles for the html elements */
+/* the styles for the body 2 */
 html {
     background-color: rgb(16, 66, 37);
-    background-image: url('./image_uploads/dartboard.jpg'); 
 }
 body {
     margin-top: 0;
@@ -11,15 +10,6 @@ body {
     background-color: white;
     border: 1px solid limegreen;
     padding: .5em 2em;
-}
-header {
-    margin: 0;
-    border-bottom: 2px solid green;
-}
-header h1 {
-    margin: 0;
-    padding: .5em 0;
-    color: green;
 }
 main {
     margin: 0;
@@ -40,16 +30,6 @@ section {
     float: left;
     width: 800PX;
     padding-bottom: 1.5em;
-}
-footer {
-    clear: both;
-    margin-top: 1em;
-    border-top: 2px solid green;
-}
-footer p {
-    text-align: right;
-    font-size: 80%;
-    margin: 1em 0;
 }
 h1 {
     font-size: 150%;
@@ -94,33 +74,4 @@ form {
 }
 br {
     clear: left;
-}
-/* the styles for classes */
-.right {
-    text-align: right;
-}
-.last_paragraph {
-	margin-bottom: 2em;	
-}
-.margin_top_increase {
-	margin-top: 1em;	
-}
-
-/********************************************************************
-* Additional styles for the player Manager application
-********************************************************************/
-#add_player_form {
-    margin: .5em 0 1em;
-}
-#add_player_form label {
-    width: 6em;
-    padding-right: 1em;
-    padding-bottom: .5em;
-    float: left;
-}
-#add_player_form input {
-    float: left;
-}
-#add_player_form input[text] {
-    width: 15em;
 }

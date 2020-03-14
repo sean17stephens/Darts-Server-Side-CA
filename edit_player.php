@@ -4,6 +4,7 @@ $player_id = filter_input(INPUT_POST, 'player_id', FILTER_VALIDATE_INT);
 $category_id = filter_input(INPUT_POST, 'category_id', FILTER_VALIDATE_INT);
 $bestfinish = filter_input(INPUT_POST, 'bestfinish');
 $dart = filter_input(INPUT_POST, 'dart');
+$nation = filter_input(INPUT_POST, 'nation');
 $winning = filter_input(INPUT_POST, 'winning', FILTER_VALIDATE_FLOAT);
 // Validate inputs
 if ($player_id == NULL || $player_id == FALSE || $category_id == NULL ||
@@ -46,6 +47,7 @@ $query = 'UPDATE players
 SET categoryID = :category_id,
 bestfinish = :bestfinish,
 dart = :dart,
+nation = :nation,
 winning = :winning,
 image = :image
 WHERE playerID = :player_id';
@@ -53,6 +55,7 @@ $statement = $db->prepare($query);
 $statement->bindValue(':category_id', $category_id);
 $statement->bindValue(':bestfinish', $bestfinish);
 $statement->bindValue(':dart', $dart);
+$statement->bindValue(':nation', $nation);
 $statement->bindValue(':winning', $winning);
 $statement->bindValue(':image', $image);
 $statement->bindValue(':player_id', $player_id);

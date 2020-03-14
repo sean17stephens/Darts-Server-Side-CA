@@ -3,6 +3,7 @@
 $category_id = filter_input(INPUT_POST, 'category_id', FILTER_VALIDATE_INT);
 $bestfinish = filter_input(INPUT_POST, 'bestfinish');
 $dart = filter_input(INPUT_POST, 'dart');
+$nation = filter_input(INPUT_POST, 'nation');
 $winning = filter_input(INPUT_POST, 'winning', FILTER_VALIDATE_FLOAT);
 // Validate inputs
 if ($category_id == null || $category_id == false ||
@@ -54,13 +55,14 @@ if ($category_id == null || $category_id == false ||
     require_once('database.php');
     // Add the records to the database 
     $query = "INSERT INTO players
-                 (categoryID, bestfinish, dart, winning, image)
+                 (categoryID, bestfinish, dart, nation, winning, image)
               VALUES
-                 (:category_id, :bestfinish, :dart, :winning, :image)";
+                 (:category_id, :bestfinish, :dart, :nation, :winning, :image)";
     $statement = $db->prepare($query);
     $statement->bindValue(':category_id', $category_id);
     $statement->bindValue(':bestfinish', $bestfinish);
     $statement->bindValue(':dart', $dart);
+    $statement->bindValue(':nation', $nation);
     $statement->bindValue(':winning', $winning);
     $statement->bindValue(':image', $image);
     $statement->execute();

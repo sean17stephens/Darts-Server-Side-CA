@@ -32,15 +32,19 @@ $statement->closeCursor();
                    value="<?php echo $player['categoryID']; ?>">
             <br>
             <label>Best Finish:</label>
-            <input type="input" name="bestfinish"
+            <input type="input" name="bestfinish" pattern="[A-Za-z]" placeholder="123"
                    value="<?php echo $player['bestfinish']; ?>">
             <br>
             <label>Name:</label>
-            <input type="input" name="dart"
+            <input type="input" name="dart" pattern="[A-Za-z]" placeholder="Sean Stephens"
                    value="<?php echo $player['dart']; ?>">
             <br>
+            <label>Nation:</label>
+            <input type="input" name="nation" pattern="[A-Za-z]" placeholder="Ireland"
+                   value="<?php echo $player['nation']; ?>">
+            <br>
             <label>Winnings:</label>
-            <input type="input" name="winning"
+            <input type="input" name="winning" pattern="[A-Za-z]" placeholder="123000"
                    value="<?php echo $player['winning']; ?>">
             <br>
             <label>Image:</label>

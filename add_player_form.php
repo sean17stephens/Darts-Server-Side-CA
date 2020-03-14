@@ -34,15 +34,19 @@ $statement->closeCursor();
             <br>
 
             <label>Best Finish:</label>
-            <input type="input" name="bestfinish">
+            <input type="input" name="bestfinish" pattern="[0-9]" placeholder="123">
             <br>
 
             <label>Name:</label>
-            <input type="input" name="dart">
+            <input type="input" name="dart" pattern="[A-Za-z]" placeholder="Sean Stephens">
+            <br>
+
+            <label>Nation:</label>
+            <input type="input" name="nation" pattern="[A-Za-z]" placeholder="Ireland">
             <br>
 
             <label>Winnings:</label>
-            <input type="input" name="winning">
+            <input type="input" name="winning" pattern="[0-9]" placeholder="123000">
             <br>
 
             <label>Image:</label>

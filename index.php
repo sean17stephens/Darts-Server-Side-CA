@@ -45,6 +45,11 @@ $statement3->closeCursor();
 <!-- the body section -->
 <body>
 <header><h1>Darts Players</h1></header>
+<ul class="navbar">
+  <li><a class="active" href="index.php">Home</a></li>
+  <li><a href="https://www.pdc.tv/">Darts News</a></li>
+  <li><a href="https://www.pdc.tv/tournaments/calendar">Upcoming Events</a></li>
+</ul>
 <main>
 <h1>Player List</h1>
 <aside>
@@ -68,6 +73,7 @@ $statement3->closeCursor();
 <tr>
 <th>Image</th>
 <th>Name</th>
+<th>Nation</th>
 <th>Best Finish</th>
 <th>Winnings</th>
 <th>Delete</th>
@@ -77,6 +83,7 @@ $statement3->closeCursor();
 <tr>
 <td><img src="image_uploads/<?php echo $player['image']; ?>" width="100px" height="100px" /></td>
 <td><?php echo $player['dart']; ?></td>
+<td><?php echo $player['nation']; ?></td>
 <td><?php echo $player['bestfinish']; ?></td>
 <td><?php echo $player['winning']; ?></td>
 <td><form action="delete_player.php" method="post"

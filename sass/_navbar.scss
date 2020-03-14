@@ -1,0 +1,27 @@
+/* The code for the navbar goes here */
+.navbar{
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: limegreen;
+      }
+      
+      li {
+        float: left;
+      }
+      
+      li a {
+        display: block;
+        color: black;
+        text-align: center;
+        padding: 14px 20px;
+        text-decoration: none;
+      }
+      
+      li a:hover {
+        background-color: limegreen;
+      }
+}
+
