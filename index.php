@@ -1,5 +1,6 @@
 <?php
 // Connect to the database
+
 require_once('database.php');
 // Set the default category to the ID of 1
 if (!isset($category_id)) {
@@ -76,8 +77,6 @@ $statement3->closeCursor();
 <th>Nation</th>
 <th>Best Finish</th>
 <th>Winnings</th>
-<th>Delete</th>
-<th>Edit</th>
 </tr>
 <?php foreach ($players as $player) : ?>
 <tr>
@@ -86,27 +85,15 @@ $statement3->closeCursor();
 <td><?php echo $player['nation']; ?></td>
 <td><?php echo $player['bestfinish']; ?></td>
 <td><?php echo $player['winning']; ?></td>
-<td><form action="delete_player.php" method="post"
-id="delete_player_form">
-<input type="hidden" name="player_id"
-value="<?php echo $player['playerID']; ?>">
-<input type="hidden" name="category_id"
-value="<?php echo $player['categoryID']; ?>">
-<input type="submit" value="Delete">
-</form></td>
-<td><form action="edit_player_form.php" method="post"
-id="delete_player_form">
-<input type="hidden" name="player_id"
-value="<?php echo $player['playerID']; ?>">
-<input type="hidden" name="category_id"
-value="<?php echo $player['categoryID']; ?>">
-<input type="submit" value="Edit">
-</form></td>
 </tr>
 <?php endforeach; ?>
 </table>
 <p><a href="add_player_form.php">Add Player</a></p>
 <p><a href="category_list.php">Edit Leagues</a></p>
+<p><a href="logout.php">Log Out</a></p>
+<p><a href="login.php">Login</a></p>
+<p><a href="register.php">Register</a></p>
+<p><a href="manage_products.php">Manage Products</a></p>
 </section>
 </main>
 <footer>
